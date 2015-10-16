@@ -117,7 +117,7 @@ function parseEnv() {
         var platform = process.env.WCJS_PLATFORM || inf.platform || process.platform;
         var arch = process.env.WCJS_ARCH || inf.runtime_arch || process.arch;
         var version = process.env.WCJS_VERSION || inf.version || 'latest';
-        var runtime = process.env.WCJS_RUNTIME || inf.runtime || 'electron';
+        var runtime = process.env.WCJS_RUNTIME || inf.runtime || 'nw.js';
         var runtimeVersion = process.env.WCJS_RUNTIME_VERSION || inf.runtime_version || 'latest';
         var targetDir = process.env.WCJS_TARGET || inf.dir || './bin';
 
