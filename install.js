@@ -121,6 +121,9 @@ function parseEnv() {
         var runtimeVersion = process.env.WCJS_RUNTIME_VERSION || inf.runtime_version || 'latest';
         var targetDir = process.env.WCJS_TARGET || inf.dir || './bin';
 
+        // force 32bit on Windows
+        if (platform == 'win') arch = 'ia32';
+
         mkdirp.sync(targetDir);
 
         if (/^win/.test(platform))
